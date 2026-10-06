@@ -1,0 +1,107 @@
+:root {
+  --paper: #e8e8e8;
+  --paper-2: #dedede;
+  --ink: #1f2328;
+  --muted: #656d76;
+  --line: #cfcfcf;
+  --surface: #f0f0f0;
+  --hover-duration: 0.2s;
+  --hover-leave-delay: 0.12s;
+}
+
+html:has(body.settings) {
+  background: var(--paper);
+  height: 100%;
+}
+
+body.settings {
+  box-sizing: border-box;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px 48px 48px;
+  background: var(--paper);
+  color: #111111;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 13px;
+  line-height: 1.45;
+  text-align: left;
+  direction: ltr;
+  --settings-hover-duration: var(--hover-duration);
+  --settings-hover-leave-delay: var(--hover-leave-delay);
+}
+
+.settings-shell {
+  width: 100%;
+  max-width: 920px;
+  margin: 0;
+}
+
+body.settings .settings-brand {
+  margin: 0 0 16px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1.3;
+  color: var(--muted);
+}
+
+body.settings .settings-page-title {
+  margin: 0 0 8px;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: #111111;
+}
+
+body.settings .settings-section {
+  margin: 0;
+  padding: 16px 0;
+  border-top: 1px solid #cfcfcf;
+}
+
+body.settings .settings-brand + .settings-section {
+  border-top: 0;
+  padding-top: 0;
+}
+
+body.settings .settings-section h2 {
+  margin: 0 0 8px;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: #111111;
+}
+
+body.settings .note {
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #8a8a8a;
+}
+
+body.settings .note strong {
+  color: #111111;
+  font-weight: 600;
+}
+
+body.settings .note:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 640px) {
+  body.settings {
+    padding: 20px 16px 36px;
+  }
+
+  body.settings .settings-brand {
+    margin-bottom: 14px;
+  }
+
+  body.settings .settings-section {
+    padding: 16px 0;
+  }
+
+  body.settings .settings-brand + .settings-section {
+    padding-top: 0;
+  }
+}
